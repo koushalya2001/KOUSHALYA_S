@@ -15,10 +15,10 @@ var ProfileSchema= mongoose.model('profileSchema',profileSchema);
 app.get('/show',function(req,res){
 ProfileSchema.find({},function(err, docs) {
 if (err)
-console.log(err);
+console.log(err);arr.push(docs);
 console.log(docs);
 }).sort([["level", "descending"], ["updated_at", "ascending"]]);
-res.render('i',{gamer:allusers});
+res.render('i',{gamer:arr});
 
 /*ProfileSchema.estimatedDocumentCount({},function(err,count){if(err) //TO REDUCE DATABASE ACCESS TIME
 console.log(err);
