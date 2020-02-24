@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+	<script>
+	/*var data={};
+	  var data.gamer=//FOR TESTING FRONT END
+		[ { team:"mi",
+			  name:"kou",
+				level:1
+		  },
+			{ team:"mi",
+				  name:"lou",
+					level:1
+			  },
+				{ team:"mi",
+					  name:"mou",
+						level:1
+				  },
+					{ team:"mi",
+						  name:"nou",
+							level:1
+					  },
+						{ team:"mi",
+							  name:"oou",
+								level:1
+						  },
+							{ team:"mi",
+								  name:"uou",
+									level:1
+							  }
+
+		];*/
+
+
+
+    var i=3;var table=document.getElementById("table");var count=6;var rIndex=0;
+		function isEmpty()
+		{ if(i>count)
+			{
+			document.getElementById("hintbutton").disabled=true;
+
+	  	}
+			else { 	document.getElementById("hintbutton").disabled=false;
+				     changecontent();
+
+			}
+
+		}
+	function changecontent()
+             { var l=i+6;//var rank=i;
+
+							 for(;i<l&& rIndex<6;i++)
+                /* var fname = document.getElementById("fname").value,
+                     lname = document.getElementById("lname").value,
+                     age = document.getElementById("age").value;*/
+
+                 {
+									 table.rows[ rIndex].cells[0].innerHTML =i+1;
+                 table.rows[ rIndex].cells[1].innerHTML = gamer[i].name;
+                 table.rows[ rIndex].cells[2].innerHTML =gamer[i].level;
+								 table.rows[ rIndex].cells[3].innerHTML = gamer[i].team;
+							  }
+
+             }
+	</script>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.card {
+
+  max-width: 150px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 10px 10px silver;
+}
+
+
+
+@media screen and (min-width: 601px) {
+  div.row {
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  div.row{
+    font-size: 10px;
+  }
+}
+ .card-body
+{
+	 color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+ .card-header
+{
+	 color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.card-footer
+{
+	 color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.he
+{
+	 color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+img
+{
+	border-radius: 50%;
+
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+body
+{
+	 background-color: #1A1B1E !important;
+
+}
+table
+{
+	 color: white;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+.me
+{
+		 color: #f5f5f5;
+ text-shadow: 0px -2px 4px #fff,
+ 				 0px -2px 10px #FF3,
+ 				  0px -10px 20px #F90,
+ 				   0px -20px 40px #C33;
+
+
+
+
+}
+
+#hintbutton{
+
+    width:100px;
+
+   font-size:20px;
+
+    color:black;
+
+    border: 2px solid   rgba(238,113,0,1) ;
+
+color:  white;
+
+background-color: black;
+
+border-radius:10px;
+
+padding-top:3px;
+
+padding-bottom:3px;
+
+    font-family:'Poppins', sans-serif;
+
+    transition-duration: 0.4s;
+
+
+
+
+
+}
+
+#hintbutton:hover{
+
+    background: linear-gradient(90deg, rgba(238,113,0,1) 0%, rgba(255,181,0,1) 61%, rgba(246,233,9,1) 100%);
+
+    padding-top:3px;
+
+    padding-bottom:3px;
+
+color:black;
+
+
+
+
+}
+.he
+{
+
+	font-size:18px;
+
+
+}
+
+</style>
+
+</head>
+<body>
+	<center>
+<h1 class="me">Score Board</h1></center>
+<div class="container">
+	<div class="flex-container">
+	<div class="row">
+
+<div class="col-xs-4 col-sm-4" >
+
+ 			<center>
+<img class="img-responsive"  style="height:60px;width:100px" src="two.png" alt="Avatar" class="avatar">
+</center>
+<div class="card" style="background: linear-gradient(90deg, rgba(238,113,0,1) 0%, rgba(255,181,0,1) 61%, rgba(246,233,9,1) 100%);">
+ <table class="table">
+    <thead>
+      <tr >
+        <td style="height: 50px" ><%=gamer[1].name %> </td>
+
+      </tr>
+       <tr >
+        <td>Runner 1</td>
+
+      </tr>
+       <tr >
+        <td>2</td>
+
+      </tr>
+    </thead>
+
+
+  </table>
+
+
+
+</div>
+ </div>
+ <div class="col-xs-4 col-sm-4 ">
+
+ 			<center>
+<img class="img-responsive" src="one.png" alt="Avatar" style="height:60px;width:100px"class="avatar">
+</center>
+
+<div class="card" style="background: radial-gradient(circle, rgba(11,56,133,1) 0%, rgba(16,73,172,1) 45%, rgba(28,10,109,1) 91%);" >
+  <table class="table">
+    <thead>
+      <tr >
+        <td><%=gamer[0].name%>
+
+          </td>
+
+      </tr>
+       <tr >
+        <td>Champion</td>
+
+      </tr>
+       <tr >
+        <td>1</td>
+
+      </tr>
+    </thead>
+
+
+  </table>
+
+
+
+</div>
+
+</div>
+<div class="col-xs-4 col-sm-4">
+	<center>
+<img class="img-responsive" src="three.png"  style="height:60px;width:100px"alt="Avatar" class="avatar">
+</center>
+ <div class="card" style="background: linear-gradient(83deg, rgba(255,89,0,1) 26%, rgba(255,103,0,1) 100%);">
+<table class="table">
+    <thead>
+      <tr >
+        <td><%=gamer[2].name %></td>
+
+      </tr>
+       <tr >
+        <td>Runner 2</td>
+
+      </tr>
+       <tr >
+        <td>3</td>
+
+      </tr>
+    </thead>
+
+
+  </table>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<br>
+<br>
+
+
+  <table class="table" id="table">
+    <thead>
+      <tr style="background-color: silver">
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>4</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+       <tr >
+        <td>5</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+       <tr >
+        <td>6</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+       <tr >
+        <td>7</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+       <tr >
+        <td>8</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+       <tr >
+        <td>9</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+
+      <tr class="he" style="background:linear-gradient(83deg, rgba(0,0,0,1) 0%, rgba(210,3,35,1) 28%, rgba(255,0,0,1) 100%);" >
+        <td>10</td>
+        <td>Ramanan</td>
+        <td>50</td>
+        <td>Csk</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+  <center>
+<button id="hintbutton" onhover="isEmpty()">Next</button>
+</center>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
