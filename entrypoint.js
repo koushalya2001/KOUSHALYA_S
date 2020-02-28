@@ -1,0 +1,13 @@
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.json());
+const leaderR = require('./routes/leader');
+app.set('view engine', 'ejs');
+app.set('views',path.join(__dirname,'views'));
+app.use(leaderR);
+app.listen(3000);
+console.log('connected');
