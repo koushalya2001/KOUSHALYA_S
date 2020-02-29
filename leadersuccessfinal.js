@@ -2,11 +2,11 @@
 const Profile = require('../models/profile');            //REQUIRING MODEL FOR USE
 var user="";                                              //require('./session');//REQUIRING SESSION- CHANGE 1
 var team="";                                              //REQUIRE TEAM -CHANGE 2
-var $=require('jquery');let cp,co,rank;
+var $=require('jquery');let cp,rank;
 exports.display = (req,res,next) =>
   { console.log('in controller');var start=new Date();
     Profile.find().sort([["level",-1],["updated_at",1]]).lean().then(docs => {            /*Profile.findOne({'name':"pillaiyar"}).lean()]*/
-co=docs.length;
+
 
 var l=docs.some(function(entry,i)                          //FINDING CURRENT USER AND CURRENT USER RANK
    { if(entry.name=="")                                   //PLEASE WRITE VARIABLE IDENTIFIER WHOSE EMAIL IS REQUIRED FROM SESSION WITHOUT QUOTES
@@ -21,7 +21,6 @@ var l=docs.some(function(entry,i)                          //FINDING CURRENT USE
 rank=rank+1;//AS INDEX STARTS FROM 0
 res.render('frontleader',{
   gamer :docs,
-  count:co,
   current:cp,
   rank:rank,
   team:team
