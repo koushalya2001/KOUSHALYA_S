@@ -20,10 +20,11 @@ var Profile=mongoose.model('Profile',profileSchema);
 module.exports= Profile;
 
 //ENTRY POINT
-app.use(leaderR);//ROUTES PAGE NAME
+const leaderR = require('./routes/leader');                              //REQUIRE ROUTES PAGE
+app.use(leaderR);                                                       //ROUTES PAGE NAME
 
 //ROUTE FILE
-const leadercontroller = require('../controller/leadersuccess');//pillaiyaramma
+const leadercontroller = require('../controller/leadersuccess');         //NAME OF LEADERCONTROLLER PAGE
 router.get('/display',leadercontroller.display);
 
 //CONTROLLER
