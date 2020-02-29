@@ -1,0 +1,33 @@
+
+//MODEL
+const profileSchema = new Schema({
+name : {
+    type: String,
+    required : true
+
+},
+level :
+{
+    type: Number,
+    required : true
+},team:String,
+created_at: {type: Date, default: Date.now},
+updated_at: {type: Date, default: Date.now,index:true}  //INDEX CREATION STEP 1-PLEASE INCLUDE FOR FASTER SORTING
+  });
+profileSchema.index({level:-1,updated_at:1});          //INDEX CREATION STEP 2-PLEASE INCLUDE FOR FASTER SORTING
+  console.log('created');
+var Profile=mongoose.model('Profile',profileSchema);
+module.exports= Profile;
+
+//ENTRY POINT
+app.use(leaderR);//ROUTES PAGE NAME
+
+//ROUTE FILE
+const leadercontroller = require('../controller/leadersuccess');//pillaiyaramma
+router.get('/display',leadercontroller.display);
+
+//CONTROLLER
+https://github.com/skoushi/KOUSHALYA_S/blob/master/leadersuccessfinal.js
+
+//VIEW
+https://github.com/skoushi/KOUSHALYA_S/blob/master/frontleader.ejs
