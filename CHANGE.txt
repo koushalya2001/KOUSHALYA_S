@@ -32,3 +32,83 @@ https://github.com/skoushi/KOUSHALYA_S/blob/master/leadersuccessfinal.js
 
 //VIEW
 https://github.com/skoushi/KOUSHALYA_S/blob/master/frontleader.ejs
+TO DISPLAY RUNNER 1,WINNER,RUNNER 2 NAME ONLY IF PRESENT AND TO DISPLAY  RUNNER 1,WINNER,RUNNER 2 TEAM
+  // RUNNER 1
+     <table class="table">
+    <thead>
+      <tr >
+        <td style="height: 50px" ><%= typeof gamer[1]!='undefined' ? gamer[1].name : '' %></td>//CHANGE
+
+      </tr>
+       <tr >
+        <td>Runner 1</td>
+
+      </tr>
+       <tr >
+        <td>2</td>
+
+      </tr>
+      <tr>
+           <td><%= typeof gamer[1]!='undefined' ? gamer[1].team : '' %></td>       //CHANGE
+        </tr>
+    </thead>
+
+
+  </table>
+
+        //WINNRER
+    <table class="table">
+    <thead>
+      <tr >
+        <td style="height: 50px" ><%= typeof gamer[1]!='undefined' ? gamer[1].name : '' %></td>//CHANGE
+
+      </tr>
+       <tr >
+        <td>Runner 1</td>
+
+      </tr>
+       <tr >
+        <td>2</td>
+
+      </tr>
+      <tr>
+           <td><%= typeof gamer[1]!='undefined' ? gamer[1].team : '' %></td>//CHANGE
+        </tr>
+    </thead>
+
+
+  </table>
+
+    
+    FOR OTHER PLAYERS
+    <tbody id="om">
+             <tr class="he" style="background:linear-gradient(83deg, rgba(0,0,0,1) 0%, rgba(210,3,35,1) 28%, rgba(255,0,0,1) 100%);" >
+               <td><%= typeof Number.isNaN(rank) ? '' : rank  %></td>
+               <td><%= typeof current!='undefined' ? current.name : '' %></td>
+               <td><%= typeof current!='undefined' ? current.level : '' %></td>
+               <td><%= typeof current!='undefined' ? current.team : '' %></td>
+             </tr>
+        <% for(var l=3;l < gamer.length;l++) { %>
+           <tr>
+             <td><%= l+1 %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].name : '' %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].level : '' %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].team : '' %></td>
+           </tr>
+        <% } %>
+</tbody>
+    
+    
+    
+    
+    //RUNNER 2
+    </tr>
+       <tr >
+        <td>Runner 2</td>
+
+      </tr>
+       <tr >
+        <td>3</td>
+        
+
+      </tr>
