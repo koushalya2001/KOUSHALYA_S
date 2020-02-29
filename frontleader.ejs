@@ -221,7 +221,7 @@ color:black;
  <table class="table">
     <thead>
       <tr >
-        <td style="height: 50px" ><%= gamer[1].name %></td>
+        <td style="height: 50px" ><%= typeof gamer[1]!='undefined' ? gamer[1].name : '' %></td>
 
       </tr>
        <tr >
@@ -251,7 +251,7 @@ color:black;
   <table class="table">
     <thead>
       <tr >
-        <td><%= gamer[0].name%></td>
+        <td><%= typeof gamer[0]!='undefined' ? gamer[0].name : 'YOU CAN BE THE CHAMPION!!!' %></td>
 
       </tr>
        <tr >
@@ -280,7 +280,7 @@ color:black;
 <table class="table">
     <thead>
       <tr >
-        <td><%=gamer[2].name%></td>
+        <td><%= typeof gamer[2]!='undefined' ? gamer[2].name : '' %></td>
 
       </tr>
        <tr >
@@ -318,23 +318,23 @@ color:black;
       </thead>
 
            <tbody id="om">
-
+             <tr class="he" style="background:linear-gradient(83deg, rgba(0,0,0,1) 0%, rgba(210,3,35,1) 28%, rgba(255,0,0,1) 100%);" >
+               <td><%= typeof Number.isNaN(rank) ? '' : rank  %></td>
+               <td><%= typeof current!='undefined' ? current.name : '' %></td>
+               <td><%= typeof current!='undefined' ? current.level : '' %></td>
+               <td><%= typeof current!='undefined' ? current.team : '' %></td>
+             </tr>
         <% for(var l=3;l < gamer.length;l++) { %>
            <tr>
              <td><%= l+1 %></td>
-             <td><%=gamer[l].name %></td>
-             <td><%=gamer[l].level %></td>
-             <td><%=gamer[l].team %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].name : '' %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].level : '' %></td>
+             <td><%= typeof gamer[l]!='undefined' ? gamer[l].team : '' %></td>
            </tr>
         <% } %>
 </tbody>
 <tbody>
-        <tr class="he" style="background:linear-gradient(83deg, rgba(0,0,0,1) 0%, rgba(210,3,35,1) 28%, rgba(255,0,0,1) 100%);" >
-          <td><%=rank%></td>
-          <td><%=current.name %></td>
-          <td><%=current.level %></td>
-          <td><%=current.team %></td>
-        </tr>
+
 
   </tbody>
 </table>
