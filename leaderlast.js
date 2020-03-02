@@ -1,6 +1,6 @@
 
 const Profile = require('../models/profile');                       //REQUIRING MODEL FOR USE
-var user="pillaiyarappa";                                         //REQUIRING SESSION- CHANGE 1
+var user="";                                         //REQUIRING SESSION- CHANGE 1
 var $=require('jquery');
 let rank,cp;
 exports.display = (req,res,next) =>                              //ROUTE -/display
@@ -19,7 +19,7 @@ exports.display = (req,res,next) =>                              //ROUTE -/displ
       );
 
     rank=rank+1;
-res.render('frontleader',{                                                  //PLEASE CHECK VIEW NAME
+res.render('frontleaders',{                                                  //PLEASE CHECK VIEW NAME
   gamer :docs,
   current:cp,
   rank:rank
